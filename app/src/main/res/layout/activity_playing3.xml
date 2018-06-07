@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_playing"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundPage"
+    tools:context="dev.edmt.flagsquizapp.Playing">
+
+    <TextView
+        android:id="@+id/questionWord"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_corner"
+        android:textSize="20sp"
+        android:text="Pertanyaan ?"
+        android:gravity="center"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/question_flag"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/round_corner"
+        android:elevation="4dp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/btnGroup"
+            android:paddingTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtScore"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_border"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtQuestion"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1/30"
+                    android:textSize="20sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:max="5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/layjawab"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnGroup">
+
+
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_above="@id/cek"
+                android:id="@+id/contentJawaban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/layjawabanA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                    <Button
+                        android:id="@+id/jawabA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/layjawabanB"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
+
+                <Button
+                        android:id="@+id/jawabB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="B"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_below="@+id/layjawabanA"
+                    android:id="@+id/layjawabanC"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <Button
+                        android:id="@+id/jawabC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="C"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layjawabanD"
+                    android:layout_below="@id/layjawabanB"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/darker_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:id="@+id/jawabD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="D"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:layout_alignParentBottom="true"
+                android:id="@+id/cek"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:text="cek"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
